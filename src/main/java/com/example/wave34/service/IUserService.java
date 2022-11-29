@@ -15,5 +15,7 @@ public interface IUserService {
 
     User getUserByUsernameAndPassword(String username, String password) throws UserNotFoundException;
 
+    boolean deleteUserById(int uid);
+
 
 }

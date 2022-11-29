@@ -48,4 +48,10 @@ public class UserServiceImpl implements IUserService {
         }
         return userObj;
     }
+
+    @Override
+    public boolean deleteUserById(int uid) {
+        userRepository.deleteById(uid);
+        return true;
+    }
 }

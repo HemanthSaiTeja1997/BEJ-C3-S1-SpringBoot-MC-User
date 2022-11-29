@@ -60,4 +60,11 @@ public class UserController {
         return new ResponseEntity<>(iUserService.getUserById(id), HttpStatus.CREATED);
     }
 
+    @DeleteMapping("/api/v1/deleteUser/{id}")
+    public ResponseEntity<?> deleteFunction(@PathVariable int id) {
+        iUserService.deleteUserById(id);
+        return new ResponseEntity<>("User Record Deleted", HttpStatus.OK);
+    }
+
+
 }
